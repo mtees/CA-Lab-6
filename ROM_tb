@@ -1,0 +1,62 @@
+module Lab6_tb;
+	wire [31:0] out;
+	reg clk;
+	reg [7:0] address; // address
+Lab6 utt(out,address, clk);
+initial begin
+
+clk = 1'b0;
+end
+
+always begin
+
+#10 clk = ~clk;
+
+end
+
+initial begin
+
+address = 8'h00;
+#20;
+address = 8'h04;
+#20
+address = 8'h08;
+#20;
+address = 8'h0c;
+#20;
+address = 8'h10;
+#20;
+address = 8'h14;
+#20;
+address = 8'h18;
+#20;
+address = 8'h1c;
+#20;
+address = 8'h20;
+#20;
+address = 8'h24;
+#20;
+address = 8'h28;
+#20;
+address = 8'h2c;
+#20;
+address = 8'h30;
+#20;
+address = 8'h34;
+#20;
+address = 8'h38;
+#20;
+address = 8'h3c;
+#20;
+address = 8'h40;
+#20;
+address = 8'h44;
+#20;
+address = 8'h48;
+#20;
+
+#40;
+$stop;
+
+end
+endmodule
